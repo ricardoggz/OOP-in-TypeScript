@@ -1,16 +1,31 @@
 {
     class User {
-        constructor(name) {
+        constructor(name, lastname, isPremium) {
             this.name = name;
-        }
-        ;
-        static getUser(name = "Juan Pérez") {
-            User.intance = new User(name);
-            return User.intance;
+            this.lastname = lastname;
+            this.isPremium = isPremium;
         }
         ;
     }
     ;
-    console.log(User.getUser());
+    let newUser = new User("Ricardo", "Guevara", true);
+    console.log(newUser);
+}
+{
+    class Student {
+        constructor(name, lastname, id) {
+            this.name = name;
+            this.lastname = lastname;
+            this.id = id;
+        }
+        ;
+        getFullData() {
+            return `Name : ${this.name} ${this.lastname} id : ${this.id}`;
+        }
+        ;
+    }
+    ;
+    let newStudent = new Student("Ricardo", "Guevara", 18204126);
+    console.log(newStudent.getFullData());
 }
 //# sourceMappingURL=index.js.map
