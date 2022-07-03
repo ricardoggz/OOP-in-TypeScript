@@ -1,17 +1,16 @@
 {
-    class Hero {
-        constructor(name, power, levelPower) {
+    class User {
+        constructor(name) {
             this.name = name;
-            this.power = power;
-            this.levelPower = levelPower;
+        }
+        ;
+        static getUser(name = "Juan Pérez") {
+            User.intance = new User(name);
+            return User.intance;
         }
         ;
     }
     ;
-    class Batman extends Hero {
-    }
-    ;
-    const BATMAN = new Batman("Batman", "Speak", 70);
-    console.log(BATMAN);
+    console.log(User.getUser());
 }
 //# sourceMappingURL=index.js.map
