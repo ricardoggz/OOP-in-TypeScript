@@ -1,13 +1,17 @@
 {
-    class User {
-        static getFullName() {
-            return `${this.firstName} ${this.lastname}`;
+    class Hero {
+        constructor(name, power, levelPower) {
+            this.name = name;
+            this.power = power;
+            this.levelPower = levelPower;
         }
+        ;
     }
-    User.firstName = "Ricardo";
-    User.lastname = "Guevara";
     ;
-    console.log(User.age = 21);
-    console.log(User.getFullName());
+    class Batman extends Hero {
+    }
+    ;
+    const BATMAN = new Batman("Batman", "Speak", 70);
+    console.log(BATMAN);
 }
 //# sourceMappingURL=index.js.map
